@@ -11,15 +11,19 @@
 		<div class="row">
 			<div class="col">
 				<div id="form-container">
-					<form id="catfact-form" action="/postCatFact" method="post">
+					<form id="registration-form" action="/postCatFact" method="post">
 						<label for="catfact">CatFact</label>
 						<input type="text" id="catfact" name="catfact"><br><br>
 						<input type="submit" value="Submit">
 					</form>
 				</div>
 			</div>
+		</div>
+		<div class="row">
 			<div class="col">
-				<p th:text=""${firstCatFact.getCatFact}></p>
+				<div id="displayCatFact">
+					<p th:text="${displayCatFact.getText()}"></p>
+				</div>
 			</div>
 		</div>
 	</div>

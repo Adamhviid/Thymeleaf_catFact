@@ -9,19 +9,18 @@ import org.springframework.web.context.request.WebRequest;
 
 @Controller
 public class CatFactController {
-    CatFact displayCatFact = new CatFact();
+    CatFact displayCatFact = new CatFact("");
 
     @GetMapping("/")
     public String index(Model catFactModel) {
-        catFactModel.addAttribute("firstCatFact",displayCatFact);
+        catFactModel.addAttribute("displayCatFact", displayCatFact);
         return "index";
     }
 
     @PostMapping("/postCatFact")
     public String postCatFact(WebRequest formData) {
         CatFact catFact = new CatFact(formData.getParameter("catfact"));
-        catFact =
-        System.out.println(catFact);
-        return "index";
+        displayCatFact = catFact;
+        return "redirect:/";
     }
 }

@@ -1,13 +1,22 @@
-#catfact-form{
+#registration-form{
 	padding: 30px;
 	border:solid;
-	border: 1px dotted;
 }
 
 #form-container{
+	height: 150px;
 	padding-top:50px;
 }
 #catfact{
+	border-color: black;
+	border:solid;
 	width: 300px;
+}
+#displayCatFact {
+	margin-top: 70px;
+	height: auto;
+	border:solid;
+	border-color: black;
+
 }
 
