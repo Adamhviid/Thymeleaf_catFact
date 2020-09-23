@@ -1,0 +1,18 @@
+package com.example.demo.models;
+
+public class CatFact {
+    private String text;
+
+    public CatFact(String text) {
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+}
